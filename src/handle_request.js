@@ -50,7 +50,8 @@ export async function handleRequest(request) {
     const response = await fetch(targetUrl, {
       method: request.method,
       headers: headers,
-      body: request.body
+      body: request.body,
+      duplex: true
     });
 
     console.log("Call Gemini Success")
